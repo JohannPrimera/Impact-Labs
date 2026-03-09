@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hidow-blue: #00AEEF;
+  --color-hidow-dark: #111111;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-hidow-dark antialiased;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-hidow-blue text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 hover:shadow-lg active:scale-95;
+}
+
+.btn-secondary {
+  @apply border-2 border-hidow-blue text-hidow-blue px-8 py-4 rounded-full font-bold transition-all hover:bg-hidow-blue hover:text-white active:scale-95;
+}
