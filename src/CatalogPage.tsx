@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight, Minus, Plus, ExternalLink, Zap, Shield, Cpu, X, CreditCard, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { catalogProducts, type CatalogProduct } from './shared/catalog-products';
+import { catalogProducts, type CatalogProduct } from '../lib/catalog-products';
 import { startStripeCheckout } from './lib/checkout';
 
 const categories = [

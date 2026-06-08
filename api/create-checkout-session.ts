@@ -3,10 +3,22 @@ import Stripe from 'stripe';
 import {
   createCheckoutSession,
   isCheckoutFailure,
-} from '../src/shared/stripe-checkout';
+} from '../lib/stripe-checkout';
 
-const stripeSecretKey = process.env.STRIPE_SECRET_KEY?.trim();
-const stripe = stripeSecretKey ? new Stripe(stripeSecretKey) : null;
+function getStripe() {
+  const stripeSecretKey = process.env.STRIPE_SECRET_KEY?.trim();
+  return stripeSecretKey ? new Stripe(stripeSecretKey) : null;
+}
+
+function checkoutErrorMessage(error: unknown) {
+  if (error instanceof Stripe.errors.StripeError) {
+    return error.message;
+  }
+  if (error instanceof Error) {
+    return error.message;
+  }
+  return 'Checkout failed';
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -15,6 +27,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return;
   }
 
+  const stripe = getStripe();
   if (!stripe) {
     res.status(503).json({
       error:
@@ -39,6 +52,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.status(200).json({ url: result.url });
   } catch (error) {
     console.error('Stripe checkout error:', error);
-    res.status(500).json({ error: 'Checkout failed' });
+    res.status(500).json({ error: checkoutErrorMessage(error) });
   }
 }

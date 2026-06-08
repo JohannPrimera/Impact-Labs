@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 import {
   createCheckoutSession,
   isCheckoutFailure,
-} from '../src/shared/stripe-checkout';
+} from '../lib/stripe-checkout';
 
 const port = Number(process.env.PORT) || 4242;
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY?.trim();
