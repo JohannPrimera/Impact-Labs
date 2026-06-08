@@ -1,11 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "functions": {
-    "api/**/*.ts": {
-      "includeFiles": "lib/**"
-    }
-  },
   "rewrites": [
     { "source": "/catalog.html", "destination": "/catalog.html" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
