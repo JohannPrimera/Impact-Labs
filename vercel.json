@@ -5,5 +5,9 @@
     "api/**/*.ts": {
       "includeFiles": "lib/**"
     }
-  }
+  },
+  "rewrites": [
+    { "source": "/catalog.html", "destination": "/catalog.html" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
 }
