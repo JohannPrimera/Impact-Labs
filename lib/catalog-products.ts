@@ -31,11 +31,7 @@ export const catalogProducts: CatalogProduct[] = [
     title: 'Impact Labs Mini Relief',
     price: 149.99,
     amazonUrl: 'https://www.amazon.com/s?k=impact+labs+mini+massage+gun',
-    images: [
-      '/assets/images/pro-gun-1.jpg',
-      '/assets/images/pro-gun-2.jpg',
-      '/assets/images/pro-gun-3.jpg',
-    ],
+    images: ['/assets/images/pro-gun-1.jpg'],
     description:
       'Compact massager with deep impact for daily use, travel, and quick recovery anytime.',
     highlights: ['Compact design', 'Deep impact', 'Ideal for travel'],

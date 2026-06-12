@@ -489,16 +489,7 @@ function QuickViewModal({
                   )}
                 </span>
               </button>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={product.amazonUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-1 items-center justify-center gap-2 border border-white/15 px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white/60 transition-all duration-300 hover:border-hidow-blue/40 hover:text-hidow-blue"
-                >
-                  Buy on Amazon
-                  <ExternalLink size={14} />
-                </a>
+              <div className="flex flex-col gap-3">
                 <button
                   type="button"
                   onClick={onClose}

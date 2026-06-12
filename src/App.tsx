@@ -576,7 +576,7 @@ export default function App() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/16892710391?text=Hi%2C%20I%20saw%20the%20Impact%20Labs%20page%20and%20would%20like%20more%20information%20about%20the%20massage%20gun."
+                href="https://wa.me/13213149491?text=Hi%2C%20I%20saw%20the%20Impact%20Labs%20page%20and%20would%20like%20more%20information%20about%20the%20massage%20gun."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/wa relative inline-flex items-center justify-center gap-2.5 overflow-hidden bg-[#25D366] px-8 py-4 text-xs font-black uppercase tracking-[0.2em] text-black transition-all duration-300 hover:shadow-[0_0_35px_rgba(37,211,102,0.3)]"
