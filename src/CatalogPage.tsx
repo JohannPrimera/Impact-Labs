@@ -48,21 +48,30 @@ function SiteHeader({
             className="h-20 w-auto sm:h-24 md:h-28"
           />
         </a>
-        <nav className="hidden items-center gap-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50 md:flex">
-          <a href="/" className="transition-colors duration-300 hover:text-white">
-            Home
-          </a>
+        <div className="flex items-center gap-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50">
           <a
             href="/catalog.html"
             onClick={onCatalogClick}
-            className={catalogActive ? 'text-hidow-blue' : 'transition-colors duration-300 hover:text-white'}
+            className={`md:hidden ${catalogActive ? 'text-hidow-blue' : 'transition-colors duration-300 hover:text-white'}`}
           >
             Catalog
           </a>
-          <a href="/#location" className="transition-colors duration-300 hover:text-white">
-            Visit Us
-          </a>
-        </nav>
+          <nav className="hidden items-center gap-8 md:flex">
+            <a href="/" className="transition-colors duration-300 hover:text-white">
+              Home
+            </a>
+            <a
+              href="/catalog.html"
+              onClick={onCatalogClick}
+              className={catalogActive ? 'text-hidow-blue' : 'transition-colors duration-300 hover:text-white'}
+            >
+              Catalog
+            </a>
+            <a href="/#location" className="transition-colors duration-300 hover:text-white">
+              Visit Us
+            </a>
+          </nav>
+        </div>
         <a
           href="/catalog.html"
           onClick={onCatalogClick}

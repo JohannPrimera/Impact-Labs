@@ -47,16 +47,21 @@ function SiteNav() {
             className="h-20 w-auto sm:h-24 md:h-28"
           />
         </a>
-        <div className="hidden md:flex items-center gap-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50">
-          <a href="#benefits" className="transition-colors duration-300 hover:text-white">
-            Why Impact Labs
-          </a>
-          <a href="/catalog.html" className="transition-colors duration-300 hover:text-white">
+        <div className="flex items-center gap-6 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/50">
+          <a href="/catalog.html" className="transition-colors duration-300 hover:text-white md:hidden">
             Catalog
           </a>
-          <a href="#location" className="transition-colors duration-300 hover:text-white">
-            Visit Our Stand
-          </a>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#benefits" className="transition-colors duration-300 hover:text-white">
+              Why Impact Labs
+            </a>
+            <a href="/catalog.html" className="transition-colors duration-300 hover:text-white">
+              Catalog
+            </a>
+            <a href="#location" className="transition-colors duration-300 hover:text-white">
+              Visit Our Stand
+            </a>
+          </div>
         </div>
         <a
           href="/catalog.html"
@@ -140,7 +145,7 @@ export default function App() {
 
   const products = [
     {
-      name: 'impact labs massage gun',
+      name: 'Impact Labs Massage Gun',
       category: 'Percussion Massager',
       price: '$399.00',
       image: '/assets/images/massage-gun-1.jpg',

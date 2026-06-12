@@ -15,7 +15,7 @@ export const catalogProducts: CatalogProduct[] = [
   {
     id: 1,
     slug: 'epulse-vibra-pro',
-    title: 'impact labs massage gun',
+    title: 'Impact Labs Massage Gun',
     price: 399.99,
     amazonUrl: 'https://www.amazon.com/s?k=impact+labs+massage+gun',
     images: ['/assets/images/massage-gun-1.jpg'],
